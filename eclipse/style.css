@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+body {
+    background-color: white;
+    animation: daytoNight 10s infinite 1.5s;
+}
+
+.content {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+}
+
+.sun {
+    height: 150px;
+    width: 159px;
+    background-color: #fcd25b;
+    border: 3px solid #fcd25b;
+    border-radius: 50%;
+}
+
+.shadow {
+    height: 170px;
+    width: 178px;
+    background-color: white;
+    border-radius: 50%;
+    top: -5px;
+    left: 8px;
+    animation: moveshadow 10s infinite 1.5s;
+}
+
+@keyframes moveshadow {
+    0% {
+        transform: translateX(150px);
+        background-color: white;
+    }
+
+    50% {
+        transform: translateX(-10px);
+        background-color: black;
+    }
+
+    100% {
+        transform: translateX(-170px);
+        background-color: white;
+    }
+}
+
+@keyframes daytoNight {
+    0% {
+        background-color: white;
+    }
+
+    50% {
+
+        background-color: black;
+    }
+
+}
